@@ -10,7 +10,7 @@ def load_mat(fname):
     return data[key].squeeze()  # Return the data array and squeeze it to remove single-dimensional entries
 
 # Define a list of colors for visualizing the data
-body_colors = ['darkblue', 'blue', 'cyan', 'green', 'lawngreen', 'yellow', 'orange', 'red']
+body_colors = ['darkred', 'darkslateblue', 'slateblue', 'lightblue', 'lime', 'green', 'yellow', 'darkorange', 'red']
 
 # Create a continuous color map from the list of colors (for gradient transitions)
 cont_body_cmap = LinearSegmentedColormap.from_list("cont_body_cmap", body_colors)
