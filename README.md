@@ -4,14 +4,14 @@ This repository contains the tools and data required to convert surface data fil
 
 ## Repository Contents
 
-- **_mapped/**: Directory where all the mapped surface data (left and right hemispheres) is stored after the conversion and mapping process.
-- **data/**: Contains additional data files required for various processing steps.
-- **func_gii_files/**: Directory where functional surface data (.func.gii) files (for both left and right hemispheres) are stored.
-- **human_surfaces/**: Contains human brain surface files for both hemispheres.
-- **mgh_files/**: Stores intermediate `.mgh` files for both hemispheres, used during the surface data conversion.
-- **species_spheres/**: Contains species-specific sphere files (for both hemispheres) used for mapping.
-- **species_surfaces/**: Holds species-specific surface files for both hemispheres, used for overlaying and visualization.
-- **surfaceData_matlabs/**: Original MATLAB files containing the brain surface data for both hemispheres.
+- **_mapped**: Directory where all the mapped surface data (left and right hemispheres) is stored after the conversion and mapping process.
+- **data**: Contains additional data files required for various processing steps.
+- **func_gii_files**: Directory where functional surface data (.func.gii) files (for both left and right hemispheres) are stored.
+- **human_surfaces**: Contains human brain surface files for both hemispheres.
+- **mgh_files**: Stores intermediate `.mgh` files for both hemispheres, used during the surface data conversion.
+- **species_spheres**: Contains species-specific sphere files (for both hemispheres) used for mapping.
+- **species_surfaces**: Holds species-specific surface files for both hemispheres, used for overlaying and visualization.
+- **surfaceData_matlabs**: Original MATLAB files containing the brain surface data for both hemispheres.
 - **README.md**: This file, providing details about the project and how to use the repository.
 - **map_cmd.sh**: A shell script that automates the mapping process between species for both hemispheres.
 - **show_map.py**: A Python script with comments, used to display the mapped surfaces for both hemispheres.
