@@ -80,7 +80,7 @@ def main():
         try:
             selection = int(input("Choose the number of the species to view: ")) - 1
             if 0 <= selection < len(species_files):
-                divided_name = species_files[selection+1].split("_")
+                divided_name = species_files[selection].split("_")
                 selected_species = divided_name[0] + "_" + divided_name[1]
                 print(f"Loading {selected_species} ...")
                 run_viewer(selected_species, hemisphere, data_type)
