@@ -51,9 +51,9 @@ This repository contains the tools and data required to convert surface data fil
    
    ```bash
    wb_command -metric-resample $FUNC_GII_FILES/resampled_disc_rh.func.gii \
-   $SPHERE_DIR/sphere_right.gii $REPO_DIR/_surfaces/sub-046_species-Aplodontia+rufa_hemi-R.sphere.surf.gii \
+   $SPHERE_DIR/sphere_right.gii $REPO_DIR/species_surfaces/sub-046_species-Aplodontia+rufa_hemi-R.sphere.surf.gii \
    ADAP_BARY_AREA ~/sub-046-disc_right.func.gii \
-   -area-surfs $SPHERE_DIR/sphere_right.gii $REPO_DIR/_surfaces/sub-046_species-Aplodontia+rufa_hemi-R.sphere.surf.gii
+   -area-surfs $SPHERE_DIR/sphere_right.gii $REPO_DIR/species_surfaces/sub-046_species-Aplodontia+rufa_hemi-R.sphere.surf.gii
    ```
 
    Repeat the command for the left hemisphere by adjusting the input and output filenames accordingly.
