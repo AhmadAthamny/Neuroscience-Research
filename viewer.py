@@ -12,7 +12,6 @@ def list_species(mapped_dir, data_type, hemisphere):
     """
     species_files = []
 
-    data_type = "disc" if data_type == "discrete" else "infl"
     hemisphere = "lh" if hemisphere == "left" else "rh"
 
     folder = f'{mapped_dir}/{data_type}_{hemisphere}'
@@ -28,7 +27,6 @@ def run_viewer(species_file, hemisphere, data_type):
     """
     Run wb_view command with species surface and functional data.
     """
-    data_type = "disc" if data_type == "discrete" else "infl"
     hemi_side = "L" if hemisphere == "left" else "R"
 
     # Build the path for the species surface file
@@ -40,7 +38,7 @@ def run_viewer(species_file, hemisphere, data_type):
         return
     
     hemisphere_abbr = "lh" if hemisphere == "left" else "rh"
-    func_file = MAPPED_DIR + f"/{data_type}_{hemisphere_abbr}/{species_file}_{hemisphere_abbr}.func.gii"
+    func_file = MAPPED_DIR + f"/{data_type}_{hemisphere_abbr}/{species_file}_{hemisphere_abbr}_{data_type}.func.gii"
     print("the func file:", func_file)
     
     # Check if the functional data file exists
