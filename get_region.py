@@ -30,7 +30,7 @@ def build_surface_file(hemi, regions_dict):
         for vec in vertices_dict[reg]:
             file_data[vec] = color
     
-    sio.savemat("tmp_output.mat", {'vertices': file_data})
+    sio.savemat("brain_regions/surfaceData_matlab/LH_S1_A1_V1.mat", {'vertices': file_data})
         
 
 
