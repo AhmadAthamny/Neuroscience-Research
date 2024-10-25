@@ -15,7 +15,7 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   echo "Processing species: $species_name"
 
   # Loop through all combinations of inflated/discrete and lh/rh
-  for DATA_TYPE in "inflated" "discrete"; do
+  for DATA_TYPE in "infl" "disc"; do
     for HEMISPHERE in "lh" "rh"; do
       if [[ "$HEMISPHERE" == "lh" ]]; then
           HEMISPHERE_UPPER="L"
