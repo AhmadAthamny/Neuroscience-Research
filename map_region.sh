@@ -25,7 +25,7 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
     EXTENSION=".func.gii"
 
     # Surface data for functional GIFTI files
-    SURFACE_DATA="${species_name}_${HEMISPHERE}"
+    SURFACE_DATA="${species_name}_${HEMISPHERE_UPPER}${EXTENSION}"
 
     # Spheres and areas (use uppercase L/R for hemisphere in the filenames)
     SOURCE_SPHERE="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-${HEMISPHERE_UPPER}_topo-Homo.sapiens.sphere.surf.gii"
@@ -36,7 +36,7 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
     MODEL_TARGET="$REPO_DIR/_surfaces/${species_name}_hemi-${HEMISPHERE_UPPER}.sphere.surf.gii"
 
     # Output file path
-    OUTPUT_FILE="$OUTPUT_DIR/${species_name}_${HEMISPHERE}.func.gii"
+    OUTPUT_FILE="$OUTPUT_DIR/${species_name}_${HEMISPHERE_UPPER}.func.gii"
 
     # Resample command
     wb_command -metric-resample \
@@ -47,7 +47,7 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
         $OUTPUT_FILE \
         -area-surfs $MODEL_SOURCE $MODEL_TARGET
 
-    echo "Completed mapping for $HEMISPHERE ($species_name)"
+    echo "Completed mapping for $HEMISPHERE_UPPER ($species_name)"
   done
 done
 
