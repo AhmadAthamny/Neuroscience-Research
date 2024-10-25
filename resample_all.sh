@@ -25,10 +25,10 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_topo-Homo.sapiens.surf.gii"
 
   # Define the output filenames for each variant
-  OUTPUT_LH_INFL="$OUTPUT_DIR/infl_lh/${species_name}_lh_inflated_mapped.func.gii"
-  OUTPUT_RH_INFL="$OUTPUT_DIR/infl_rh/${species_name}_rh_inflated_mapped.func.gii"
-  OUTPUT_LH_DISC="$OUTPUT_DIR/disc_lh/${species_name}_lh_discrete_mapped.func.gii"
-  OUTPUT_RH_DISC="$OUTPUT_DIR/disc_rh/${species_name}_rh_discrete_mapped.func.gii"
+  OUTPUT_LH_INFL="$OUTPUT_DIR/infl_lh/${species_name}_lh_infl_mapped.func.gii"
+  OUTPUT_RH_INFL="$OUTPUT_DIR/infl_rh/${species_name}_rh_infl_mapped.func.gii"
+  OUTPUT_LH_DISC="$OUTPUT_DIR/disc_lh/${species_name}_lh_disc_mapped.func.gii"
+  OUTPUT_RH_DISC="$OUTPUT_DIR/disc_rh/${species_name}_rh_disc_mapped.func.gii"
 
   # Perform resampling for inflated left hemisphere
   RESAMPLED_DATA="$WORK_DIR/func_gii_files/resampled_infl_lh.func.gii"
