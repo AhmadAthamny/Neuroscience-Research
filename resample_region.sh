@@ -29,11 +29,11 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   OUTPUT_RH="$OUTPUT_DIR/S1_A1_V1/${species_name}_R.func.gii"
 
   # Perform resampling for inflated left hemisphere
-  RESAMPLED_DATA="$WORK_DIR/func_gii_files/source/LH_S1_A1_V1_L.func.gii"
+  RESAMPLED_DATA="$WORK_DIR/func_gii_files/source/LH_S1_A1_V1.func.gii"
   wb_command -metric-resample $RESAMPLED_DATA $SOURCE_SPHERE_L $TARGET_SPHERE_L ADAP_BARY_AREA $OUTPUT_LH -area-surfs $MODEL_SOURCE_L $MODEL_TARGET_L
 
   # Perform resampling for inflated right hemisphere
-  RESAMPLED_DATA="$WORK_DIR/func_gii_files/source/RH_S1_A1_V1_R.func.gii"
+  RESAMPLED_DATA="$WORK_DIR/func_gii_files/source/RH_S1_A1_V1.func.gii"
   wb_command -metric-resample $RESAMPLED_DATA $SOURCE_SPHERE_R $TARGET_SPHERE_R ADAP_BARY_AREA $OUTPUT_RH -area-surfs $MODEL_SOURCE_R $MODEL_TARGET_R
 
   echo "Completed mapping for species: $species_name"
