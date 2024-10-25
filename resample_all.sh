@@ -3,7 +3,7 @@
 # Set directories
 WORK_DIR="/home/ahmed/WorkDirectory"
 REPO_DIR="/home/ahmed/EvolutionOfCorticalShape"
-OUTPUT_DIR="/home/ahmed/WorkDirectory/species_func_gii"
+OUTPUT_DIR="/home/ahmed/Neuroscience-Research/species_func_gii"
 
 # Set the source species (Homo sapiens)
 SOURCE_SPECIES="sub-020_species-Homo+sapiens"
