@@ -2,8 +2,8 @@
 
 # Directories
 REPO_DIR="/home/ahmed/EvolutionOfCorticalShape"
-FUNC_GII_DIR="/home/ahmed/WorkDirectory/species_func_gii"
-OUTPUT_DIR="/home/ahmed/WorkDirectory/_mapped"
+FUNC_GII_DIR="/home/ahmed/Neuroscience-Research/species_func_gii"
+OUTPUT_DIR="/home/ahmed/Neuroscience-Research/_mapped"
 
 # Source species (Homo sapiens)
 SOURCE_SPECIES="sub-020_species-Homo+sapiens"
