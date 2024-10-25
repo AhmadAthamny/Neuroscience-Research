@@ -29,7 +29,7 @@ for surf_file in $SURFACES_DIR/sub-*_hemi-*.surf.gii; do
     screenshot_file="$OUTPUT_DIR/${species_name}_${hemisphere}.png"
 
     # Display and capture screenshot with wb_command
-    $WB_COMMAND_PATH -show-scene "$surf_file" -overlay "$overlay_file" -screenshot "$screenshot_file" 
+    $WB_COMMAND_PATH -surface "$surf_file" -overlay-metric "$overlay_file" -screenshot "$screenshot_file"
 
     echo "Captured screenshot for $species_name $hemisphere: $screenshot_file"
 done
