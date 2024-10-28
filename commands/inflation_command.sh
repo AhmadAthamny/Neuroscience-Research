@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define directories
-SURFACES_DIR="species_surfaces"  # Path to your .surf.gii surfaces directory
-OUTPUT_DIR="species_surfaces_infl"   # Directory to store the inflated .surf.gii files
+SURFACES_DIR="/home/ahmed/Neuroscience-Research/species_surfaces"  # Path to your .surf.gii surfaces directory
+OUTPUT_DIR="/home/ahmed/Neuroscience-Research/species_surfaces_infl"   # Directory to store the inflated .surf.gii files
 TEMP_DIR=$(mktemp -d)            # Temporary directory for intermediate files
 
 # Ensure output directory exists
