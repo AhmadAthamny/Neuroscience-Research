@@ -36,11 +36,11 @@ bg_map_rh[bg_map_rh >= 0] = 0.75
 bg_map_rh[bg_map_rh < 0] = 0.5
 
 # Load the data from the specified .mat file (assumed to contain data for the left hemisphere)
-data = load_mat('body_disc_lh.mat')
+data = load_mat('brain_regions\surfaceData_matlab\LH_S1_A1_V1.mat')
 
 # Create a view of the brain surface for the left hemisphere, overlaying the data
 # Use the loaded background map and the discrete color map created earlier
-view = plotting.view_surf(fsaverage['infl_left'], data, bg_map=bg_map_lh, cmap=disc_cmap, symmetric_cmap=False, threshold=0.00001)
+view = plotting.view_surf(fsaverage['pial_left'], data, bg_map=bg_map_lh, cmap=disc_cmap, symmetric_cmap=False, threshold=0.00001)
 
 # Open the generated brain surface view in a web browser
 view.open_in_browser()
