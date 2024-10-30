@@ -4,4 +4,4 @@ FSAVERAGE6_MGH="/home/ahmed/Neuroscience-Research/brain_regions/labels/mgh_files
 
 # Resample from fsaverage7 to fsaverage6
 mri_surf2surf --srcsubject fsaverage7 --trgsubject fsaverage6 \
-              --hemi lh --sval "$FSAVERAGE7_MGH" --tval "FSAVERAGE6_MGH"
+              --hemi lh --sval "$FSAVERAGE7_MGH" --tval "$FSAVERAGE6_MGH"
