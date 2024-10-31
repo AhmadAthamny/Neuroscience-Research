@@ -12,8 +12,8 @@ mkdir -p "$OUTPUT_DIR"
 SOURCE_SPECIES="sub-020_species-Homo+sapiens"
 SOURCE_SPHERE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L.sphere.reg.surf.gii"
 SOURCE_SPHERE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R.sphere.reg.surf.gii"
-MODEL_SOURCE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L_midthickness.surf.gii"
-MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R_midthickness.surf.gii"
+MODEL_SOURCE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L.surf.gii"
+MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R.surf.gii"
 
 # Path to the source label data (Adjust if necessary)
 LABEL_DATA_L="$WORK_DIR/labels/label_files/LH_result.label.gii"  # Left hemisphere label data
@@ -28,8 +28,8 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   # Target spheres and surfaces for the current species (using registered spheres)
   TARGET_SPHERE_L="$REPO_DIR/_surfaces/${species_name}_hemi-L.sphere.reg.surf.gii"
   TARGET_SPHERE_R="$REPO_DIR/_surfaces/${species_name}_hemi-R.sphere.reg.surf.gii"
-  MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_midthickness.surf.gii"
-  MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_midthickness.surf.gii"
+  MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L.surf.gii"
+  MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R.surf.gii"
 
   # Output filenames
   OUTPUT_LH="$OUTPUT_DIR/${species_name}_L.label.gii"
@@ -49,13 +49,6 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   else
     echo "Missing files for left hemisphere processing of $species_name. Skipping..."
   fi
-
-  echo "Checking files for $species_name:"
-  echo "LABEL_DATA_L: $LABEL_DATA_L"
-  echo "SOURCE_SPHERE_L: $SOURCE_SPHERE_L"
-  echo "TARGET_SPHERE_L: $TARGET_SPHERE_L"
-  echo "MODEL_SOURCE_L: $MODEL_SOURCE_L"
-  echo "MODEL_TARGET_L: $MODEL_TARGET_L"
 
   if [ -f "$LABEL_DATA_R" ] && [ -f "$SOURCE_SPHERE_R" ] && [ -f "$TARGET_SPHERE_R" ] && [ -f "$MODEL_SOURCE_R" ] && [ -f "$MODEL_TARGET_R" ]; then
     # Resample right hemisphere label data
