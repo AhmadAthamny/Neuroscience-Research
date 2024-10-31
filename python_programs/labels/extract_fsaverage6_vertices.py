@@ -2,36 +2,48 @@ import nibabel as nib
 import numpy as np
 
 # Define paths
-input_mgh = r"C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\RH_S1_A1_V1_fsavg6.mgh"
-output_mgh = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\RH_S1_A1_V1_clrd.mgh'
-label_txt = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\label_files\RH_label.txt'
+input_mgh = r"C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\LH_S1_A1_V1.mgh"
+output_mgh = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\LH_fsavg7_cleared.mgh'
+label_txt = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\label_files\LH_label.txt'
 
 
-# Define region values and optional colors
-regions = {
-    "S1": {"value": 7, "color": [1, 0, 0]},     # Red
-    "V1": {"value": 2.5, "color": [0, 0, 1]},   # Blue
-    "A1": {"value": 3, "color": [0, 1, 0]}      # Green
-}
+import nibabel as nib
+import numpy as np
 
-# Load the .mgh file
-mgh_data = nib.load(input_mgh)
-data = mgh_data.get_fdata().squeeze()
+# Load the original .mgh file with regions
+mgh_path = input_mgh  # Use the initial .mgh file
+img = nib.load(mgh_path)
+data = img.get_fdata()
 
-# Identify valid values and set others to zero
-valid_values = {region["value"] for region in regions.values()}
-cleaned_data = np.where(np.isin(data, list(valid_values)), data, 0).astype(np.float32)
+# Define the region values to keep
+region_values = {7: "S1", 2.5: "V1", 3: "A1"}
 
-# Save the cleaned data as a new .mgh file
-affine = mgh_data.affine
-cleaned_mgh = nib.MGHImage(cleaned_data.reshape(data.shape), affine)
-cleaned_mgh.to_filename(output_mgh)
+# Count vertices of each region type before clearing
+print("Vertex counts before clearing:")
+for value, region_name in region_values.items():
+    count = np.sum(data == value)
+    print(f"{region_name} (value {value}): {count} vertices")
 
-# Create label.txt file
-with open(label_txt, "w") as f:
-    for region_name, region_info in regions.items():
-        region_value = region_info["value"]
-        color = region_info["color"]
-        f.write(f"{region_value} {region_name} {color[0]} {color[1]} {color[2]}\n")
+# Create a mask that retains only defined region values
+cleaned_data = np.zeros(data.shape)
+for value in region_values:
+    cleaned_data[data == value] = value
 
-print("Cleaned .mgh and label.txt created successfully!")
+# Count vertices of each region type after clearing
+print("\nVertex counts after clearing:")
+for value, region_name in region_values.items():
+    count = np.sum(cleaned_data == value)
+    print(f"{region_name} (value {value}): {count} vertices")
+
+# Save the cleaned .mgh data
+cleaned_mgh_path = output_mgh
+cleaned_img = nib.MGHImage(cleaned_data.astype(np.float32), img.affine)
+nib.save(cleaned_img, cleaned_mgh_path)
+print(f"\nSaved cleaned .mgh file: {cleaned_mgh_path}")
+
+
+# Find unique values in the original data to understand which regions are present
+unique_values, counts = np.unique(data, return_counts=True)
+print("Unique values and their counts in the original data:")
+for value, count in zip(unique_values, counts):
+    print(f"Value {value}: {count} vertices")
