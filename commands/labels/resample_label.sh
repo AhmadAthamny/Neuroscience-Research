@@ -10,8 +10,8 @@ mkdir -p "$OUTPUT_DIR"
 
 # Source species (Homo sapiens)
 SOURCE_SPECIES="sub-020_species-Homo+sapiens"
-SOURCE_SPHERE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L.sphere.reg.surf.gii"
-SOURCE_SPHERE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R.sphere.reg.surf.gii"
+SOURCE_SPHERE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii"
+SOURCE_SPHERE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii"
 MODEL_SOURCE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L.surf.gii"
 MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R.surf.gii"
 
@@ -26,8 +26,8 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   echo "Processing species: $species_name"
 
   # Target spheres and surfaces for the current species (using registered spheres)
-  TARGET_SPHERE_L="$REPO_DIR/_surfaces/${species_name}_hemi-L.sphere.reg.surf.gii"
-  TARGET_SPHERE_R="$REPO_DIR/_surfaces/${species_name}_hemi-R.sphere.reg.surf.gii"
+  TARGET_SPHERE_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii"
+  TARGET_SPHERE_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii"
   MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L.surf.gii"
   MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R.surf.gii"
 
