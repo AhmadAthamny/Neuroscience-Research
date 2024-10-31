@@ -19,16 +19,8 @@ MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R_midthickness.surf.g
 LABEL_DATA_L="$WORK_DIR/labels/label_files/LH_result.label.gii"  # Left hemisphere label data
 LABEL_DATA_R="$WORK_DIR/labels/label_files/RH_result.label.gii"  # Right hemisphere label data
 
-# Verify that there are files matching the pattern before continuing
-species_files=($REPO_DIR/_surfaces/sub-*_hemi-L.sphere.reg.surf.gii)
-
-if [ ${#species_files[@]} -eq 0 ]; then
-  echo "No species files found matching pattern $REPO_DIR/_surfaces/sub-*_hemi-L.sphere.reg.surf.gii"
-  exit 1
-fi
-
 # Iterate over all target species
-for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii
+for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii; do
   # Extract the species name (including sub-XXX prefix)
   species_name=$(basename "$species_file" | cut -d'_' -f1-2)
   echo "Processing species: $species_name"
