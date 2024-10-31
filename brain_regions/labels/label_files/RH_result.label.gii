@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GIFTI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://brainvis.wustl.edu/caret6/xml_schemas/GIFTI_Caret.xsd"
+       Version="1"
+       NumberOfDataArrays="1">
+   <MetaData>
+      <MD>
+         <Name><![CDATA[AnatomicalStructurePrimary]]></Name>
+         <Value><![CDATA[Invalid]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[ProgramProvenance]]></Name>
+         <Value><![CDATA[Connectome Workbench
+Type: Command Line Application
+Version: 1.5.0
+Qt Compiled Version: 5.15.12
+Qt Runtime Version: 5.15.13
+Commit: unknown
+Commit Date: unknown
+Compiled with OpenMP: YES
+Compiler: c++ (/usr/bin)
+Compiler Version: 13.2.0
+Compiled Debug: NO
+Operating System: Linux
+]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[Provenance]]></Name>
+         <Value><![CDATA[wb_command -metric-label-import /home/ahmed/Neuroscience-Research/brain_regions/labels/func_files/RH_S1_A1_V1.func.gii /home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/labels.txt /home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/RH_result.label.gii -unlabeled-value -1 -discard-others]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[WorkingDirectory]]></Name>
+         <Value><![CDATA[/home/ahmed/Neuroscience-Research/brain_regions/labels/label_files]]></Value>
+      </MD>
+   </MetaData>
+   <LabelTable>
+      <Label Key="0" Red="1" Green="1" Blue="1" Alpha="0"><![CDATA[???]]></Label>
+      <Label Key="10" Red="1" Green="0" Blue="0" Alpha="1"><![CDATA[S1]]></Label>
+      <Label Key="20" Red="0" Green="1" Blue="0" Alpha="1"><![CDATA[A1]]></Label>
+      <Label Key="30" Red="0" Green="0" Blue="1" Alpha="1"><![CDATA[V1]]></Label>
+   </LabelTable>
+<DataArray Intent="NIFTI_INTENT_LABEL"
+           DataType="NIFTI_TYPE_INT32"
+           ArrayIndexingOrder="RowMajorOrder"
+           Dimensionality="1"
+           Dim0="40962"
+           Encoding="GZipBase64Binary"
+           Endian="LittleEndian"
+           ExternalFileName=""
+           ExternalFileOffset="0">
+   <MetaData>
+   </MetaData>
+   <Data>eJzt3cty4yoQAFCvvc46//+Zt1J3EQ+RbIF4NHBOlcqpiSeSEYKGRvLj8b/vR7nS//u8sc9033eOv5Yan+dH+pm+k62V0uP/qnoUsaVlVOuc//h0ntPft64PXPd82UZ5Vy92qicRzsUnOdd37vW+yrl+vrw+k38ffW579XmjP2cvEersp2usdzw2m5FlEbnNz60r6lUcz0fsujXapzgm9299inuuxkitrqGW16ZrfrxP1/mqbUHPuvf12GvOKJX2KavVJdq6Umci1KmSvjm3f9dnrm/lc7xzP1Dj+tYOcNXRtbbbNRdNjb68JGa42u6MaltG7Fcbuoa0fbsaYxy99ywHR3s7z5HkulLP1d+4vpPXUceQO+bQZ/6S/z1WUlfUqxgi16tRjnKx6e9b5H/vjOPuGj0eJJbV2oMedfor2XalT4F86Zz9qtdPy9gmanwFUMNZHkPMNZfcfqdH/6QfBGbwqR/UJ8J1d3LUpePpUXFFq1zMu1xRy/2J2/Ipp1/qDdDCpzi8dwyfM274tJ4YSulr6/pKXmFVuf1XTl9l3gx4J0LbcHfOy/ofVicX9lera1y7wSrk0/d2pR3rFSvdzcP2yvVGEvX4Ih4TXHGnH3z3vBr9aT8ztN3vuMd0HWJsYBbaqLFGjldbjqFnHWMD69DW7Ms9hLRWmrvI/b8t2jFxGnDG9b+OnDhIrATkqrGWJ5qRc6O993l2DowN+jEWq085AuR5Jj9ffX7GiGf45e730/G8++zGwsBdpet9rRGGcjXjhJx9vf4bMLcIc0pXj8EcWDyRx5Ml9US9iiFyvRrlLN919Ps7f7d2DvAObT4r61G303uzd5170adAvl1yRy1jm3R9UpT4CqAG9ymuIaffadU/5fSXAFGMWDsIq7o77p4phmiVi8mJ23pvj5dX4tbNESJfq8DcjmLwWe7/gRb0tWXSdRXpeotd112wj5b9l74P6CFqDLRy+9d7jrbmfCpwzvXSnvmiNUTsd6IdD8ARORSop+X6q2h6rHOKuqFcAKJ59yzjFvsydmAUsUeZ13VWnnfDjvRdAAB/nX2fQaS46HnyCr2NzklFmgcZnaOLtO1OOQAAvYg5gBK5zxiSRwT4a8Tc2tHvW+131bk/86IAAAD7qjEPejYfenc+1TwrAEC+T/PzEeftI67tPnpf+kpbI+tFxO1KGSm3+mVa828DZe60b7AT1woAALC6ozUkr+tWetzrV/vewx3uTxxRZr3KebdzCcC6zBnD+tLvFjn6zhHfPQIARDV67jDKnF/psTyTVwAAfu0wP15r7bj16Htb+VyPHutF1Ooa126wirN2Q/uxnqO26ko71itWGn2P/izxYeRjA37pR8eYuW207mktxuYAa9KuxzDDWH/0HMYM8xsAnNNeE8UMa9Ehihbx+YxxvnEKANBa6RjF2AVgLj3HjfJw94zOfZacl9HHE6EM2Ie6sT5tAACspWQec9ZnD76K8kzF9L3mkWFfxla04LsTAMrVHh+0iP0jjbEAgDjEBvkir4+xtgeAGc2QL2ZNK8VCK30WAOZVOz8GUEuL2HjXGHzEfadnZTn6WMzHr8E56OuojJU7AHdEyzG9e45cpOOE1R3F9+LNuby7v829bsCPCM+rELsBAEAfNWP9dA4XmMPodTy5a35mWAMxupxW3KhDeQIAMANx6/ysO4J4aj7P2TptAGoYmWtIf36Xj+h5bJFzJb2PQx4KAAAA4F8j8jpySAAA0N+V/OWMec4RawRKc8TyzGsaXedW2q6UsTK/X64l5+BIr/OfczzAvL6Tn0e2J0BdZ9eo6xkAAADaubrOctR6zV7PKLEO9V9nn310+dc8XznvKdnvbnUGAHaV5rTO3iOfBUQ22/eI9ziuqJ8dAGBWrXMBPf7uCKU5idycCQAA8f0HgeE/Ug==</Data>
+</DataArray>
+</GIFTI>
