@@ -28,8 +28,8 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   # Target spheres and surfaces for the current species (using registered spheres)
   TARGET_SPHERE_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii"
   TARGET_SPHERE_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii"
-  MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L.surf.gii"
-  MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R.surf.gii"
+  MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_topo-Homo.sapiens.surf.gii"
+  MODEL_TARGET_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_topo-Homo.sapiens.surf.gii"
 
   # Output filenames
   OUTPUT_LH="$OUTPUT_DIR/${species_name}_L.label.gii"
