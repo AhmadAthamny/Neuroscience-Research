@@ -2,8 +2,8 @@ import numpy as np
 import nibabel as nib
 
 # Load the data from the .txt file
-txt_file_path = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\text_files\RH_S1_A1_V1.txt'
-mgh_file_path = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\RH_S1_A1_V1.mgh'
+txt_file_path = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\text_files\LH_S1_A1_V1.txt'
+mgh_file_path = r'C:\Users\Ahmad Athamny\Documents\University\SummerInternship\Neuroscience-Research\brain_regions\labels\mgh_files\LH_S1_A1_V1.mgh'
 
 # Assuming the .txt file is organized by vertex with each row as a single value
 data = np.loadtxt(txt_file_path, dtype=np.float32)  # Ensure data is in float32
