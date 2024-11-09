@@ -2,7 +2,7 @@
 
 # Directories
 REPO_DIR="/home/ahmed/EvolutionOfCorticalShape"
-LABEL_GII_DIR="/home/ahmed/Neuroscience-Research/brain_regions/labels/resampled/"
+LABEL_GII_DIR="/home/ahmed/Neuroscience-Research/brain_regions/labels/resampled_2/"
 OUTPUT_DIR="/home/ahmed/Neuroscience-Research/brain_regions/labels/mapped_2"
 
 # Source species (Homo sapiens)
