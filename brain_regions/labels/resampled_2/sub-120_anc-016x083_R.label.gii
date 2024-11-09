@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GIFTI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://brainvis.wustl.edu/caret6/xml_schemas/GIFTI_Caret.xsd"
+       Version="1"
+       NumberOfDataArrays="1">
+   <MetaData>
+      <MD>
+         <Name><![CDATA[AnatomicalStructurePrimary]]></Name>
+         <Value><![CDATA[Invalid]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[ParentProvenance]]></Name>
+         <Value><![CDATA[/home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/RH_result.label.gii:
+wb_command -metric-label-import /home/ahmed/Neuroscience-Research/brain_regions/labels/func_files/RH_S1_A1_V1.func.gii /home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/labels.txt /home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/RH_result.label.gii -unlabeled-value -1 -discard-others
+
+]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[ProgramProvenance]]></Name>
+         <Value><![CDATA[Connectome Workbench
+Type: Command Line Application
+Version: 1.5.0
+Qt Compiled Version: 5.15.12
+Qt Runtime Version: 5.15.13
+Commit: unknown
+Commit Date: unknown
+Compiled with OpenMP: YES
+Compiler: c++ (/usr/bin)
+Compiler Version: 13.2.0
+Compiled Debug: NO
+Operating System: Linux
+]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[Provenance]]></Name>
+         <Value><![CDATA[wb_command -label-resample /home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/RH_result.label.gii /home/ahmed/EvolutionOfCorticalShape/_surfaces/sub-020_species-Homo+sapiens_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii /home/ahmed/EvolutionOfCorticalShape/_surfaces/sub-120_anc-016x083_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii ADAP_BARY_AREA /home/ahmed/Neuroscience-Research/brain_regions/labels/resampled_2/sub-120_anc-016x083_R.label.gii -area-surfs /home/ahmed/EvolutionOfCorticalShape/_surfaces/sub-020_species-Homo+sapiens_hemi-R_topo-Homo.sapiens.surf.gii /home/ahmed/EvolutionOfCorticalShape/_surfaces/sub-120_anc-016x083_hemi-R_topo-Homo.sapiens.surf.gii]]></Value>
+      </MD>
+      <MD>
+         <Name><![CDATA[WorkingDirectory]]></Name>
+         <Value><![CDATA[/home/ahmed/Neuroscience-Research/commands/labels]]></Value>
+      </MD>
+   </MetaData>
+   <LabelTable>
+      <Label Key="0" Red="1" Green="1" Blue="1" Alpha="0"><![CDATA[???]]></Label>
+      <Label Key="10" Red="0" Green="0" Blue="1" Alpha="1"><![CDATA[V1]]></Label>
+      <Label Key="20" Red="0" Green="1" Blue="0" Alpha="1"><![CDATA[A1]]></Label>
+      <Label Key="30" Red="1" Green="0" Blue="0" Alpha="1"><![CDATA[S1]]></Label>
+   </LabelTable>
+<DataArray Intent="NIFTI_INTENT_LABEL"
+           DataType="NIFTI_TYPE_INT32"
+           ArrayIndexingOrder="RowMajorOrder"
+           Dimensionality="1"
+           Dim0="40962"
+           Encoding="GZipBase64Binary"
+           Endian="LittleEndian"
+           ExternalFileName=""
+           ExternalFileOffset="0">
+   <MetaData>
+      <MD>
+         <Name><![CDATA[Name]]></Name>
+         <Value><![CDATA[#1]]></Value>
+      </MD>
+   </MetaData>
+   <Data>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</Data>
+</DataArray>
+</GIFTI>
