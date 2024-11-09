@@ -20,7 +20,7 @@ for file in "$INPUT_DIR"/*_topo-Homo.sapiens.surf.gii; do
   mris_inflate "$TEMP_DIR/$base_name.asc" "$TEMP_DIR/${base_name}_inflated.asc"
 
   # Step 3: Expand the surface further to ensure full visibility of regions
-  mris_expand "$TEMP_DIR/${base_name}_inflated.asc" "$TEMP_DIR/${base_name}_expanded.asc" 1.5  # Adjust the expansion factor as needed
+  mris_expand "$TEMP_DIR/${base_name}_inflated.asc" 1.5 "$TEMP_DIR/${base_name}_expanded.asc"  # Adjust the expansion factor as needed
   
   # Step 4: Convert the expanded .asc back to .gii
   mris_convert "$TEMP_DIR/${base_name}_expanded.asc" "$OUTPUT_DIR/${base_name}_inflated.surf.gii"
