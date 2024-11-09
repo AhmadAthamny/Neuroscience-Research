@@ -11,8 +11,8 @@ mkdir -p "$OUTPUT_DIR"
 SOURCE_SPECIES="sub-020_species-Homo+sapiens"
 SOURCE_SPHERE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii"
 SOURCE_SPHERE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii"
-MODEL_SOURCE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L.surf.gii"
-MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R.surf.gii"
+MODEL_SOURCE_L="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-L_topo-Homo.sapiens.surf.gii"
+MODEL_SOURCE_R="$REPO_DIR/_surfaces/${SOURCE_SPECIES}_hemi-R_topo-Homo.sapiens.surf.gii"
 
 # Path to source label data
 LABEL_DATA_L="/home/ahmed/Neuroscience-Research/brain_regions/labels/label_files/LH_result.label.gii"
@@ -25,13 +25,6 @@ for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.re
   echo "Processing species: $species_name"
 
   # Define target sphere and model surfaces based on GitHub example structure
-  # Resampling Process
-for species_file in $REPO_DIR/_surfaces/sub-*_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii; do
-  # Extract species name
-  species_name=$(basename "$species_file" | cut -d'_' -f1-2)
-  echo "Processing species: $species_name"
-
-  # Update resampling commands to use these files instead of native `.surf.gii` files
   TARGET_SPHERE_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_topo-Homo.sapiens.sphere.reg.surf.gii"
   TARGET_SPHERE_R="$REPO_DIR/_surfaces/${species_name}_hemi-R_topo-Homo.sapiens.sphere.reg.surf.gii"
   MODEL_TARGET_L="$REPO_DIR/_surfaces/${species_name}_hemi-L_topo-Homo.sapiens.surf.gii"
